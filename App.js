@@ -1,13 +1,17 @@
 import { StatusBar } from "expo-status-bar"
 import React from "react"
-import Navigation from './navigation';
-import { View } from "react-native"
+import Navigation from "./navigation"
+import { View, Text } from "react-native"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 
 export default function App() {
   return (
-    <View>
-      <Navigation/>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <Text>Details Screen</Text>
+      </View>
+      <Navigation />
+      <StatusBar />
+    </SafeAreaProvider>
   )
 }
